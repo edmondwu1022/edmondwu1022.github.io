@@ -11,9 +11,13 @@ $(document).on("keydown", function () {
         nextLevel()
     }
 })
+
 $(document).on("click", function () {
-    if (gameStart === false && currentLevel === 0) {
-        return
+    if (gameStart === false) {
+        gameStart = true
+        console.log(gameStart)
+        currentLevel = 0
+        nextLevel()
     }
 
     if (step >= currentLevel) {
@@ -34,7 +38,6 @@ $(".button").on("click", function (event) {
 
         if (button == paths[step]) {
             step += 1
-            console.log("collect")
         }
         else {
             gameFail()
@@ -89,11 +92,12 @@ function randomNumber() {
 }
 
 function gameFail() {
-    gameStart = false
-    currentLevel = 0
+    currentLevel = 1
     paths.length = 0
+    step = 0
     $("h1").text("The Game is over!!")
     setTimeout(() => {
         $("h1").text("Please Press A Key To Start")
+        gameStart = false
     }, 1000);
 }

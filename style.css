@@ -10,6 +10,7 @@ h1{
     text-align: center;
     margin: 10%;
     color: #fef2bf;
+
 }
 
 .container{
@@ -62,5 +63,8 @@ h1{
     }
     h1{
         font-size: xx-large;
+        text-align: center;
+        line-height: 50px;
+        padding-top: 10px;
     }
 }
