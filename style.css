@@ -46,6 +46,9 @@ h1{
 .press{
     background-color: grey;
 }
+.hint{
+    background-color: white;
+}
 
 @media(max-width:500px)
 {

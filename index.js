@@ -52,6 +52,7 @@ function nextLevel() {
 
     let button = BUTTONS[randomNumber()]
     paths.push(button)
+
     $("." + button).animate(
         {
             opacity: 0.5,
@@ -97,7 +98,7 @@ function gameFail() {
     step = 0
     $("h1").text("The Game is over!!")
     setTimeout(() => {
-        $("h1").text("Please Press A Key To Start")
+        $("h1").text("Press To Start")
         gameStart = false
     }, 1000);
 }
