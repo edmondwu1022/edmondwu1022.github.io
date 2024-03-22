@@ -5,12 +5,12 @@ let step = 0
 
 const BUTTONS = ["green", "red", "yellow", "blue"]
 
-$(document).on("keydown", function () {
-    if (gameStart === false) {
-        gameStart = true
-        nextLevel()
-    }
-})
+// $(document).on("keydown", function () {
+//     if (gameStart === false) {
+//         gameStart = true
+//         nextLevel()
+//     }
+// })
 
 $(document).on("click", function () {
     if (gameStart === false) {
